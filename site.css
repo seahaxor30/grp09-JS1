@@ -69,6 +69,24 @@ label {
   font-weight: bold;
 }
 
+/* Films */
+#films {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0;
+}
+
+#films div {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid var(--dark2);
+  border-radius: 5px;
+  color: var(--dark2);
+  background-color: var(--light2);
+  font-weight: bold;
+}
+
 /* Person page */
 h1#name {
   margin: 50px;
