@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Star Wars people</title>
+  <link rel="stylesheet" href="site.css">
+  <script src="people.js" defer></script>
+</head>
+
+<body>
+  <div>
+    <h1>Star Wars Universe Lookup</h1>
+    <!-- <button onclick="getPeople()">Get people</button> -->
+    <label for="searchString">Who you looking for? <span class="small">(Regular expressions are cool
+        here)</span></label>
+    <input id="searchString" oninput="filterPeople()" autocomplete="off" />
+  </div>
+  <section id="people">
+  </section>
+</body>
+
+</html>
