@@ -49,3 +49,5 @@ const renderPeople = persons => {
 }
 
 const goToPersonPage = id => window.location = `/person.html?id=${id}`
+
+const goToStarshipPage = () => window.location = '/starship.html';
