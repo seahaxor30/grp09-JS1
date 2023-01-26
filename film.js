@@ -1,13 +1,16 @@
 let title;
-let planets;
-let characters;
+let director;
+let date;
+let episode;
 let starshipsUl;
 
 // Runs on page load
 addEventListener('DOMContentLoaded', () => {
   title = document.querySelector('h1#title');
-  planets = document.querySelector('#planets>ul');
-  characters = document.querySelector('#characters>ul');
+  episode = document.querySelector('span#episode');
+
+  date = document.querySelector('span#date');
+  director = document.querySelector('span#director');
   planetsUl = document.querySelector('#planets>ul');
   charactersUl = document.querySelector('#characters>ul');
   starshipsUl = document.querySelector('#starships>ul');
@@ -32,6 +35,10 @@ const renderFilm = film => {
   console.log (`planets are : ${film.planets}, Characters are: ${film.characters}`)
   document.title = `SWAPI - ${film?.title}`;  // Just to make the browser tab say their name
   title.textContent = film?.title;
+  date.textContent = film?.release_date;
+  director.textContent = film?.director;
+  episode.textContent = film?.episode_id;
+
   const planetsList = film?.planets.map(planetUrl => `<li><a href="/planet.html?id=${getPlanetIdFromUrl(planetUrl)}">${getPlanetIdFromUrl(planetUrl)}</li>`);
     console.log(planetsList);
     planetsUl.innerHTML = planetsList.join("");

@@ -37,8 +37,6 @@ async function fetchplanet(id) {
     populationSpan.textContent = planet?.population;
     climateSpan.textContent = planet?.climate;
     terrainSpan.textContent = planet?.terrain;
-    console.log(planet?.residents)
-    
     const residentsList = planet?.residents?.map(personUrl => `<li><a href="/person.html?id=${getPersonIdFromUrl(personUrl)}">${getPersonIdFromUrl(personUrl)}</li>`)
     const filmsLis = planet?.films?.map(filmUrl => `<li><a href="/film.html?id=${getFilmIdFromUrl(filmUrl)}">${getFilmIdFromUrl(filmUrl)}</li>`)
     filmsUl.innerHTML = filmsLis.join("");
