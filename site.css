@@ -68,6 +68,22 @@ label {
   background-color: var(--light2);
   font-weight: bold;
 }
+#planetsList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0;
+}
+
+#planetsList div {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid var(--dark2);
+  border-radius: 5px;
+  color: var(--dark2);
+  background-color: var(--light2);
+  font-weight: bold;
+}
 
 /* Films */
 #films {
@@ -112,11 +128,13 @@ h1#name {
 
 section#planets,
 section#people,
+section#residents,
 section#films {
   margin: 50px;
 }
 
 section#planets ul,
+section#residents ul,
 section#people ul,
 section#films ul {
   list-style-type: none;
@@ -124,6 +142,7 @@ section#films ul {
 }
 
 section#planets a,
+section#residents a,
 section#people a,
 section#films a {
   display: inline-block;
