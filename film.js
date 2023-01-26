@@ -40,7 +40,7 @@ const renderFilm = film => {
 
   const charactersList = film?.characters.map(characterUrl => `
         <li>
-            <a href="/film.html?id=${getCharacterIdFromUrl(characterUrl)}">
+            <a href="/person.html?id=${getCharacterIdFromUrl(characterUrl)}">
             ${getCharacterIdFromUrl(characterUrl)}
         </li>
     `);

@@ -138,3 +138,34 @@ section#films a {
   border-radius: 5px;
   border: 1px solid var(--dark2);
 }
+
+/* Film page */
+h1#title {
+  margin: 50px;
+}
+
+section#planets,
+section#characters{
+  margin: 50px;
+}
+
+section#planets ul,
+section#characters ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+section#planets a,
+section#charcters a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.1em;
+
+  background-color: var(--light2);
+  color: var(--dark2);
+  font-weight: bold;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--dark2);
+}

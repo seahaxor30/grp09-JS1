@@ -40,7 +40,11 @@ const renderPerson = person => {
     `<a href="/planet?id=${getPlanetIdFromUrl(person?.homeworld)}">
       ${getPlanetIdFromUrl(person?.homeworld)}
       </a>`;
-  const filmsLis = person?.films?.map(filmUrl => `<li><a href="/film.html?id=${getFilmIdFromUrl(filmUrl)}">${getFilmIdFromUrl(filmUrl)}</li>`)
+  const filmsLis = person?.films?.map(filmUrl => `
+      <li><a href="/film.html?id=${getFilmIdFromUrl(filmUrl)}">
+      ${getFilmIdFromUrl(filmUrl)}
+      </li>
+  `)
   filmsUl.innerHTML = filmsLis.join("");
 }
 
