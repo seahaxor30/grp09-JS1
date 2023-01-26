@@ -129,14 +129,16 @@ h1#name {
 section#planets,
 section#people,
 section#residents,
-section#films {
+section#films,
+section#characters {
   margin: 50px;
 }
 
 section#planets ul,
 section#residents ul,
 section#people ul,
-section#films ul {
+section#films ul,
+section#characters ul {
   list-style-type: none;
   padding: 0;
 }
@@ -144,7 +146,8 @@ section#films ul {
 section#planets a,
 section#residents a,
 section#people a,
-section#films a {
+section#films a,
+section#characters a {
   display: inline-block;
   text-decoration: none;
   font-size: 1.1em;
