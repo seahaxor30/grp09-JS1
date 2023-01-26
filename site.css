@@ -68,6 +68,38 @@ label {
   background-color: var(--light2);
   font-weight: bold;
 }
+/* starships page */
+body .sw {
+  background-color: yellow;
+  width: 100%;
+  height: 300%;
+}
+#genInfo {
+  background-color: rgb(137, 207, 240);
+  border-radius: 5%;
+  border: 5% rgb(82, 121, 238);
+  width: 50%;
+  align-items: center;
+  margin-left: 25%;
+}
+#starships button {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid var(--dark2);
+  border-radius: 5px;
+  color: var(--dark2);
+  background-color: var(--light2);
+  font-weight: bold;
+}
+#sships {
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  color:var(--dark2);
+  text-decoration:underline;
+  margin-bottom: 5%;
+  margin-top: 2%;
+}
 
 /* Person page */
 h1#name {
@@ -94,20 +126,26 @@ h1#name {
 
 section#planets,
 section#people,
-section#films {
+section#films,
+section#pilots,
+section#starships {
   margin: 50px;
 }
 
 section#planets ul,
 section#people ul,
-section#films ul {
+section#films ul,
+section#pilots ul,
+section#starships ul {
   list-style-type: none;
   padding: 0;
 }
 
 section#planets a,
 section#people a,
-section#films a {
+section#films a,
+section#pilots a,
+section#starships a {
   display: inline-block;
   text-decoration: none;
   font-size: 1.1em;

@@ -4,6 +4,7 @@ let heightSpan;
 let massSpan;
 let filmsDiv;
 let planetDiv;
+let starshipsDiv;
 
 // Runs on page load
 addEventListener('DOMContentLoaded', () => {
@@ -13,6 +14,7 @@ addEventListener('DOMContentLoaded', () => {
   heightSpan = document.querySelector('span#height');
   homeworldSpan = document.querySelector('span#homeworld');
   filmsUl = document.querySelector('#films>ul');
+  starshipsDiv = document.querySelector('#starships>ul');
   const sp = new URLSearchParams(window.location.search)
   const id = sp.get('id')
   fetchPerson(id)
@@ -39,6 +41,8 @@ const renderPerson = person => {
   homeworldSpan.innerHTML = `<a href="/planet?id=${getPlanetIdFromUrl(person?.homeworld)}">${getPlanetIdFromUrl(person?.homeworld)}</a>`;
   const filmsLis = person?.films?.map(filmUrl => `<li><a href="/film.html?id=${getFilmIdFromUrl(filmUrl)}">${getFilmIdFromUrl(filmUrl)}</li>`)
   filmsUl.innerHTML = filmsLis.join("");
+  const shipsList = person?.starships?.map(shipUrl => `<li><a href="/starshipInfo.html?id=${getShipIdFromUrl(shipUrl)}">${getShipIdFromUrl(shipUrl)}</li>`)
+  starshipsDiv.innerHTML = shipsList.join("");
 }
 
 const getIdFromUrl = (entityName, url) => {
@@ -50,3 +54,4 @@ const getIdFromUrl = (entityName, url) => {
 const getFilmIdFromUrl = url => getIdFromUrl("films", url)
 const getPlanetIdFromUrl = url => getIdFromUrl("planets", url)
 const getPersonIdFromUrl = url => getIdFromUrl("people", url)
+const getShipIdFromUrl = url => getIdFromUrl("starships", url)
