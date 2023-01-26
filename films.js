@@ -12,6 +12,7 @@ async function getFilms() {
         .then(res => res.json())
         .then(res => { url = res.next; return res })
         .then(res => res.results)
+        .then(res => res.map(p => ({ ...p, id: +getFilmIdFromUrl(p.url) })))
       films.push(...fetchedFilms);
     }
     catch (ex) {
@@ -20,6 +21,13 @@ async function getFilms() {
   }
   console.log("All the films are ", films)
   renderFilms(films);
+}
+
+const getFilmIdFromUrl = (url) => {
+  const re = /.*film\/(\d+).*/
+  const matches = url.match(re)
+  if (!matches) throw "Bad URL. Not a people URL."
+  return matches[1]
 }
 
 const renderFilms = films => {

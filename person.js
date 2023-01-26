@@ -36,7 +36,10 @@ const renderPerson = person => {
   heightSpan.textContent = person?.height;
   massSpan.textContent = person?.mass;
   birthYearSpan.textContent = person?.birth_year;
-  homeworldSpan.innerHTML = `<a href="/planet?id=${getPlanetIdFromUrl(person?.homeworld)}">${getPlanetIdFromUrl(person?.homeworld)}</a>`;
+  homeworldSpan.innerHTML = 
+    `<a href="/planet?id=${getPlanetIdFromUrl(person?.homeworld)}">
+      ${getPlanetIdFromUrl(person?.homeworld)}
+      </a>`;
   const filmsLis = person?.films?.map(filmUrl => `<li><a href="/film.html?id=${getFilmIdFromUrl(filmUrl)}">${getFilmIdFromUrl(filmUrl)}</li>`)
   filmsUl.innerHTML = filmsLis.join("");
 }
